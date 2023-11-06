@@ -1,0 +1,76 @@
+/* ================ FONT AWSOME ================= */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+:root{
+    --colorOne:#fa4478
+}
+body{
+    font-family: 'Rubik', sans-serif;  
+    height: 100vh;
+    overflow: hidden;  
+}
+section{
+    height: 100vh;
+    background: linear-gradient(to top,#4f4f6a,#33334d,#23253e);
+}
+/* ================ Modal Notification ================= */
+.modal-content{
+    background-color: #23253e;
+}
+#Timer p,
+.modal button{
+    color: var(--colorOne);
+}
+/* ==================== navbar ========================== */
+.nav-pills .nav-link{
+    border-radius: 0px;
+    color: #fff;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link{
+    background-color: transparent;
+    color: var(--colorOne);
+}
+/* ======================== sections ========================== */
+.capsul{
+    width: 100PX;
+    height: 100px;
+}
+h1{
+    font-size: 3rem;
+    color:var(--colorOne);
+    border: solid 1.5px #888888;
+    cursor: default;
+}
+button{
+    padding: 0.7rem 1.5rem;
+    background-color: var(--colorOne);
+}
+input{
+    width: 100PX;
+    height: 100px;
+    color: var(--colorOne);
+    font-size: 3rem;
+    outline: none;
+    border: solid 1.5px #888888;
+}
+input::placeholder{
+    color: var(--colorOne);
+    font-size: 3rem;
+} 
+/* ===================== Xsmall device ================== */
+@media screen and (width <= 576px) {
+    #stopwatch .capsul{
+        width: 80PX;
+        height: 80px;
+    }
+    input{
+        width: 70PX;
+        height: 70px;
+    }
+    h1,input,input::placeholder{
+        font-size: 2rem;
+    }
+    button{
+        padding: 0.5rem 1rem;
+    }
+}
