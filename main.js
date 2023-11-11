@@ -1,5 +1,14 @@
+// < ================== active link ===================  >
+let links = document.querySelectorAll('ul li a');
+links.forEach(link => {
+    link.onclick = () => {
+        links.forEach(otherlink => otherlink.classList.remove('active'));
+        link.classList.add('active');
+    };
+});
+onload = ()=> scroll({top:0})
 // < ==================== Watch ======================= >
-let Watch_H1 = document.querySelectorAll('#Watch h1');
+let Watch_H1 = document.querySelectorAll('#Watch .row h2');
 function time(){
     let TimeNow = new Date(),
         sec = TimeNow.getSeconds(),
@@ -13,7 +22,7 @@ function time(){
 time();
 setInterval(time, 1000); 
 // < ========================== Stopwatch ======================= >
-let Stopwatch_H1 = document.querySelectorAll('#stopwatch h1'),
+let Stopwatch_H1 = document.querySelectorAll('#stopwatch .row h2'),
     reset = document.getElementById('reset'),
     start = document.getElementById('start'),
     mood = 'Start',
@@ -81,7 +90,6 @@ BtnStartTimer.onclick = ()=> {
                             });
                             BtnCancelTimer.classList.add('d-none');
                             BtnStartTimer.innerHTML = 'Started';
-                            document.getElementById('btnModal').click()
                         }
                 }, 1000);
                 moodTimer = 'pauseTimer'

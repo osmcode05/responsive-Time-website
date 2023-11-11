@@ -1,0 +1,190 @@
+/* ==================== FONT AWSOME ==================== */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+/* ==================== CSS VARIABLES ==================== */
+:root{
+    --colorOne:#fa4478;
+    --colorTwo: #e7e1e1;
+    --colorThree: #767171;
+    --colorFour: #888888;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Rubik', sans-serif;  
+    height: 100vh;
+    overflow: hidden;  
+}
+/* ==================== COMMUN PROPRITIES ==================== */
+section{
+    height: 100vh;
+    background: linear-gradient(to top,#4f4f6a,#33334d,#23253e);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3REM;
+}
+h1{
+    font-size: 3.5rem;
+    color: var(--colorTwo);
+}
+.row{
+    display: flex;
+    gap: 2REM;
+}
+.capsul{
+    width: 120PX;
+    height: 120px;
+    text-align: center;
+}
+.capsul h2{
+    font-size: 3rem;
+    color:var(--colorOne);
+    border: solid 1.5px var(--colorFour);
+    border-radius: 8px;
+    padding: 1REM;
+    margin-bottom: 1rem;
+    cursor: default;
+}
+.capsul p{
+    color: var(--colorFour);
+    font-weight: bold;
+}
+.buttons{
+    display: flex;
+    gap: 2REM;
+}
+button{
+    padding: .9rem 1.8rem;
+    background-color: var(--colorOne);
+    border: none;
+    border-radius: 20PX;
+    font-size: 1rem;
+    font-weight: bolder;
+    color: var(--colorTwo);
+    letter-spacing: 1px;
+}
+.d-none{
+    display: none;
+}
+/* ==================== navbar ========================== */
+ul {
+    width: 100%;
+    position: fixed;
+    top: 30px;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+}
+ul li {
+    display: inline-block;
+    padding: 0.3REM 1.5rem;
+}
+ul li:nth-child(2) {
+    border: solid var(--colorThree);
+    border-width: 0 2px;
+}
+ul li a{
+    text-decoration: none;
+    color: var(--colorTwo);
+    font-weight: bold;
+}
+.active{
+    color: var(--colorOne);
+}
+/* ======================== Watch Sections ========================== */
+#Watch{
+    position: relative;
+}
+.media{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 2REM;
+}
+.media a{
+    color:var(--colorFour);
+    font-size: 2rem;
+}
+/* ==================== Timer Section ==================== */ 
+.alert{
+    color: var(--colorOne);
+    margin: -1.5rem 0;
+}
+.opacity-0{
+    opacity: 0;
+}
+input{
+    width:85%;
+    height: 85%;
+    background-color: transparent;
+    text-align: center;
+    color: var(--colorOne);
+    font-size: 3rem;
+    font-weight: bolder;
+    outline: none;
+    border: solid 1.5px var(--colorFour);
+    border-radius: 8px;
+    margin-bottom: 15%;
+    padding: 1REM;
+}
+input::placeholder{
+    color: var(--colorOne);
+    font-size: 3rem;
+} 
+input.pe-none{
+    pointer-events: none;
+}
+/* ===================== BREAKPOINT ================== */
+/* --- Xsmall device --- */
+@media screen and (width <= 576px) {
+    h1,.capsul h2{
+        font-size: 2rem;
+    }
+    .row{
+        gap: 1REM;
+    }
+    #stopwatch .row{
+        gap: 0.5REM;
+    }
+    #stopwatch .capsul h2{
+        font-size: 1.8rem;
+    }
+    #stopwatch p{
+        font-size: .7REM;
+    }
+    .capsul{
+        width: 80PX;
+        height: 80px;
+    }
+    input{
+        width:100%;
+        height: 100%;
+        font-size: 2.5rem;
+    }
+    input::placeholder{
+        font-size: 2.5REM;
+    }
+}
+/* --- small device --- */
+@media screen and ( 577px <= width <= 768px) {
+    input,input::placeholder,h1,.capsul h2{
+        font-size: 2.5rem;
+    }
+    .row{
+        gap: 1.5REM;
+    }
+    .capsul{
+        width: 90PX;
+        height: 90px;
+    }
+    .alert{
+        margin: -2rem 0;
+    }
+}
